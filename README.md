@@ -5,8 +5,8 @@ A collection of abstract data types in the C programming language
 ## Abstract Data Types
 
 -   [Linked-List](src/list.h)
-<!-- -   [Doubly Linked-List](src/dlist.h)
--   [Circular Linked-List](src/clist.h)
+-   [Doubly Linked-List](src/dlist.h)
+<!-- -   [Circular Linked-List](src/clist.h)
 -   [Stack](src/stack.h)
 -   [Queue](src/queue.h) -->
 
@@ -23,7 +23,8 @@ make test
 ## Notes
 
 At this point, the collection of adt's are not made into a library, but this would be a natural
-next step. The code is documented using Doxygen style tags.
+next step. The code is documented using [Doxygen](https://www.doxygen.nl/manual/docblocks.html) 
+style tags.
 
 The code is refactored but heavily inspired by the adt's presented in
 [Mastering Algorithms with C](http://shop.oreilly.com/product/9781565924536.do) by O'Reilly.
