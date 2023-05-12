@@ -76,8 +76,8 @@ list_init(List *list, void (*destroy)(void *data));
  * passed as `destroy` to *list_init* once for each element as it is removed, provided `destroy`
  * was not set to NULL.
  * 
- * \note No operation is permitted after *list_destroy* is called unless *list_init* is called
- * again.
+ * \note
+ * No operation is permitted after *list_destroy* is called unless *list_init* is called again.
  *  
  * Complexity: O(n)
  * 
