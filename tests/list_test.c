@@ -1,5 +1,6 @@
 #include <criterion/criterion.h>
 
+#include <stdio.h>
 #include <stdlib.h> // free()
 
 #include "../src/list.h"
@@ -9,6 +10,31 @@ List list;
 int *item1 = NULL;
 int *item2 = NULL;
 int *item3 = NULL;
+
+// static void print_list(const List *list)
+// {
+// 	List_Element *element;
+// 	int *data;
+// 	int i;
+
+// 	// Display the linked-list
+// 	fprintf(stdout, "List size is %d\n", list_size(list));
+
+// 	i = 0;
+// 	element = list_head(list);
+
+// 	while (1) {
+// 	data = list_data(element);
+// 	fprintf(stdout, "list[%d]=%d\n", i, *data);
+
+// 	i++;
+
+// 	if (list_is_tail(element))
+// 		break;
+// 	else
+// 		element = list_next(element);
+// 	}
+// }
 
 void
 suite_setup()
