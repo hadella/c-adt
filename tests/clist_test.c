@@ -56,6 +56,13 @@ Test(list_tests, empty)
 	cr_expect(clist_head(&list) == NULL, "empty dlist's head should be NULL");
 }
 
+Test(list_tests, delete_empty)
+{
+	void *removed = NULL;
+	cr_expect(clist_remove_next(&list, clist_head(&list), &removed) == -1, "remove from empty list should return -1");
+	cr_expect(clist_remove_next(&list, NULL, &removed) == -1, "remove from empty list should return -1");
+}
+
 Test(list_tests, insert_into_empty)
 {
 	// Give our item a value

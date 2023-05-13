@@ -83,6 +83,33 @@ Test(list_tests, insert_next_into_empty)
 	cr_expect(dlist_data(dlist_tail(&list)) == item1, "tail should be the item inserted");
 }
 
+Test(list_tests, insert_non_empty_fail)
+{
+	// Give our item a value
+	*item1 = 1;
+	*item2 = 2;
+
+	// List starts empty
+	cr_expect(dlist_insert_next(&list, NULL, item1) == 0, "insert into empty list should return 0");
+	cr_expect(dlist_size(&list) == 1, "list's size should be 1");
+	cr_expect(dlist_head(&list) != NULL, "list's head should be not NULL");
+	cr_expect(dlist_tail(&list) != NULL, "list's tail should be not NULL");
+	//    h t
+	//    [1]->0
+	// 0<-[ ]
+
+	cr_expect(dlist_insert_next(&list, NULL, item2) == -1, "insert into non empty list with NULL arg should return -1");
+	cr_expect(dlist_insert_prev(&list, NULL, item2) == -1, "insert into non empty list with NULL arg should return -1");
+}
+
+Test(list_tests, remove_from_empty)
+{
+	void *removed = NULL;
+	cr_expect(dlist_remove(&list, dlist_head(&list), &removed) == -1, "remove from empty list should return -1");
+	cr_expect(dlist_remove(&list, dlist_tail(&list), &removed) == -1, "remove from empty list should return -1");
+	cr_expect(dlist_remove(&list, NULL, &removed) == -1, "remove from empty list should return -1");
+}
+
 Test(list_tests, insert_prev_into_empty)
 {
 	// Give our item a value

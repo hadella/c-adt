@@ -61,6 +61,13 @@ Test(list_tests, empty)
 	cr_expect(list_tail(&list) == NULL, "empty list's tail should be NULL");
 }
 
+Test(list_tests, delete_empty)
+{
+	void *removed = NULL;
+	cr_expect(list_remove_next(&list, list_head(&list), &removed) == -1, "remove from empty list should return -1");
+	cr_expect(list_remove_next(&list, NULL, &removed) == -1, "remove from empty list should return -1");
+}
+
 Test(list_tests, insert_into_empty)
 {
 	// Give our item a value
