@@ -45,7 +45,7 @@ Test(queue_tests, queue_enqueue_peek_dequeue)
 
 	// A queue is basically the same as a linked-list except the items will be ordered
 	// in a specific way. The queue is a FIFO data structure, where the first item 
-	// queue will be the first item removed. Our unit test can be simplified since we
+	// queued will be the first item removed. Our unit test can be simplified since we
 	// just need to test the item ordering.
 
 	cr_expect(queue_enqueue(&queue, &item1) == 0, "enqueueing onto empty queue should return 0");
