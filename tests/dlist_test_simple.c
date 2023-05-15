@@ -1,6 +1,11 @@
-/*
-This is clone of `dlist_test` but uses a simple data type
-*/
+/**
+ * \file dlist_test.c
+ * \author Justin Hadella (justin.hadella@gmail.com)
+ * \brief Unit test for Doubly linked-list ADT
+ * 
+ * \note
+ * This is clone of `dlist_test` but uses a simple data type
+ */
 #include <criterion/criterion.h>
 
 #include "../src/dlist.h"

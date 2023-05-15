@@ -1,3 +1,8 @@
+/**
+ * \file dlist_test.c
+ * \author Justin Hadella (justin.hadella@gmail.com)
+ * \brief Unit test for Doubly linked-list ADT
+ */
 #include <criterion/criterion.h>
 
 #include <stdio.h>

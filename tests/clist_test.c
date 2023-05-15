@@ -1,3 +1,8 @@
+/**
+ * \file clist_test.c
+ * \author Justin Hadella (justin.hadella@gmail.com)
+ * \brief Unit test for Circular linked-list ADT
+ */
 #include <criterion/criterion.h>
 
 #include <stdio.h>

@@ -1,6 +1,11 @@
-/*
-This is clone of `clist_test` but uses a simple data type
-*/
+/**
+ * \file clist_test.c
+ * \author Justin Hadella (justin.hadella@gmail.com)
+ * \brief Unit test for Circular linked-list ADT
+ * 
+ * \note
+ * This is clone of `clist_test` but uses a simple data type
+ */
 #include <criterion/criterion.h>
 
 #include "../src/clist.h"

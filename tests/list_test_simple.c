@@ -1,6 +1,11 @@
-/*
-This is clone of `list_test` but uses a simple data type
-*/
+/**
+ * \file list_test_simple.c
+ * \author Justin Hadella (justin.hadella@gmail.com)
+ * \brief Unit test for List ADT
+ * 
+ * \note
+ * This is clone of `list_test` but uses a simple data type
+ */
 #include <criterion/criterion.h>
 
 #include "../src/list.h"
